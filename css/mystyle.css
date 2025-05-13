@@ -1,0 +1,107 @@
+p{
+    color:#444444
+}
+
+a.pamelalink{
+    padding: 0px 30px;
+    margin: 7px 15px;
+    border-radius: 50px;
+    color: #444444;
+}
+
+a.pamelalink:hover{
+   background-color: grey;
+   color: white;
+}
+
+div.pameladivgrey {
+  background-color: rgb(245, 231, 231);
+  padding: 30px;
+  border-radius: 10px;
+  border: 0.7px solid grey;
+  line-height: 1.9;
+  letter-spacing: 0.3px;
+  margin-bottom: 30px;
+
+  /* 新增這兩行 ↓↓↓ */
+  width: 100%;
+  max-width: 100%;
+}
+
+h4.pamelasmall{
+    font-size: 20px;
+}
+
+section#about.resume-section{
+    background-color: #DDDDDD;
+}
+
+.pamelacrop{
+    height: 300px;
+    overflow:hidden;
+    object-fit:cover;
+    margin:10px 5px;
+    border-radius: 10px;
+}
+
+.card-group {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center; /* 預設置中 */
+  }
+  
+  /* 第一張卡片的狗狗往下對齊，露出更多地上狗狗 */
+.card-group .card:first-child img {
+    object-position: bottom;
+  }
+  
+  .card-body {
+    flex: 1;
+  }
+  
+  
+  .pameladivgrey {
+    background-color: rgb(245, 231, 231);
+    padding: 30px;
+    border-radius: 10px;
+    border: 0.7px solid grey;
+    margin-bottom: 30px;
+    min-height: 240px; 
+  }
+  
+  
+  .pamtext {
+    display: block;
+    width: 100%;
+    text-align: left;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .pamdogfix {
+    object-fit: cover;
+    object-position: center top;
+    height: 300px;
+    width: 100%;
+  }
+  
+  body {
+    background: url('../assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  
+  
