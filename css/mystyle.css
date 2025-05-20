@@ -22,8 +22,6 @@ div.pameladivgrey {
   line-height: 1.9;
   letter-spacing: 0.3px;
   margin-bottom: 30px;
-
-  /* 新增這兩行 ↓↓↓ */
   width: 100%;
   max-width: 100%;
 }
@@ -59,7 +57,7 @@ section#about.resume-section{
     height: 300px;
     width: 100%;
     object-fit: cover;
-    object-position: center; /* 預設置中 */
+    object-position: center; 
   }
   
   /* 第一張卡片的狗狗往下對齊，露出更多地上狗狗 */
@@ -118,13 +116,6 @@ section#about.resume-section{
 color:#708090;
 }
 
-.pambraintweak {
-  object-fit: cover;
-  object-position: center 30%;  /* 顯示位置往下移，可調整百分比 */
-  height: 300px;
-  width: 100%;
-  border-radius: 10px;
-}
 
 
   
