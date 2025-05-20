@@ -116,6 +116,20 @@ section#about.resume-section{
 color:#708090;
 }
 
+.pamelaname-title {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 5px;   /* 拉近 PAMELA 和下面那句話的距離 */
+  margin-top: -20px;    /* 把整個標題區塊往上提一點 */
+}
+
+.pamelaslogan {
+  font-size: 20px;
+  color: #555;
+  margin-top: 10px;     /* 保留適當距離 */
+  margin-bottom: 30px;
+}
 
 
   
