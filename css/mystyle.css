@@ -117,5 +117,14 @@ section#about.resume-section{
 
 color:#708090;
 }
-  
+
+.pambraintweak {
+  object-fit: cover;
+  object-position: center 30%;  /* 顯示位置往下移，可調整百分比 */
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+
   
