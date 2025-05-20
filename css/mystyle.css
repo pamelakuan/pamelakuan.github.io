@@ -106,6 +106,16 @@ section#about.resume-section{
   .pamelaserif{
       font-family: "Noto Serif TC", serif;
 }
+
+.pamelacallbg{
+  background-image: url("../assets/img/bg.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+}
   
+.pamelahl{
+
+color:#708090;
+}
   
   
