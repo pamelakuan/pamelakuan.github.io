@@ -49,7 +49,9 @@
                     </h1>
                     <div class="subheading mb-5">
                         「我的人生就像游泳一樣——不會浮就溺水。」
-                        <a href="mailto:pamela.kuan0608@gmail.com" class="pamelalink">pamela.kuan0608@gmail.com</a>
+                        <a href="mailto:pamela.kuan0608@gmail.com" class="pamelaemail">
+                          pamela.kuan0608@gmail.com</a>
+                        
                     </div>
                     <p class="lead mb-5 pamelaserif" style="line-height: 1.9; color: #444; max-width: 700px;">
                         白天上課、晚上打工，身兼老師與游泳教練，連排休是什麼都快忘了的全能打工魂。<br>
@@ -259,16 +261,78 @@
             <hr class="m-0" />
             <!-- Interests-->
             <section class="resume-section" id="mylife">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">我愛旅遊</h2>
-                   <a href="assets/photo/01.jpg" target="_blank"><img src="assets/photo/01.jpg" alt="泰國長頸鹿合照" width="20%" class= "pamelacrop"></a>
-                    <a href="assets/photo/03.jpg" target="_blank"><img src="assets/photo/03.jpg" alt="泰服照片" width="20%" class= "pamelacrop"></a>
-                    <a href="assets/photo/04.jpg" target="_blank"><img src="assets/photo/04.jpg" alt="跟老虎拍照" width="20%" class= "pamelacrop"></a>
-                    <a href="assets/photo/05.jpg" target="_blank"><img src="assets/photo/05.jpg" alt="台南墨鏡自拍照" width="20%" class= "pamelacrop"></a>
-                    <a href="assets/photo/06.jpg" target="_blank"><img src="assets/photo/06.jpg" alt="迪士尼米奇頭套" width="20%" class= "pamelacrop"></a>
-                    <a href="assets/photo/07.jpg" target="_blank"><img src="assets/photo/07.jpg" alt="騎馬照" width="20%" class= "pamelacrop"></a>
-                    <a href="assets/photo/08.jpg" target="_blank"><img src="assets/photo/08.jpg" alt="墾丁自拍" width="20%" class= "pamelacrop"></a>
-                    <a href="assets/photo/09.jpg" target="_blank"><img src="assets/photo/09.jpg" alt="跟大象抱抱" width="20%" class= "pamelacrop"></a>
+              <div class="resume-section-content">
+                <h2 class="mb-5">我愛旅遊</h2>
+            
+                <!-- 照片區塊 -->
+                <div class="travel-photo-grid">
+                  <a href="assets/photo/01.jpg" target="_blank"><img src="assets/photo/01.jpg" alt="泰國長頸鹿合照" class="pamelacrop"></a>
+                  <a href="assets/photo/03.jpg" target="_blank"><img src="assets/photo/03.jpg" alt="泰服照片" class="pamelacrop"></a>
+                  <a href="assets/photo/04.jpg" target="_blank"><img src="assets/photo/04.jpg" alt="跟老虎拍照" class="pamelacrop"></a>
+                  <a href="assets/photo/05.jpg" target="_blank"><img src="assets/photo/05.jpg" alt="台南墨鏡自拍照" class="pamelacrop"></a>
+                  <a href="assets/photo/06.jpg" target="_blank"><img src="assets/photo/06.jpg" alt="迪士尼米奇頭套" class="pamelacrop"></a>
+                  <a href="assets/photo/07.jpg" target="_blank"><img src="assets/photo/07.jpg" alt="騎馬照" class="pamelacrop"></a>
+                  <a href="assets/photo/08.jpg" target="_blank"><img src="assets/photo/08.jpg" alt="墾丁自拍" class="pamelacrop"></a>
+                  <a href="assets/photo/09.jpg" target="_blank"><img src="assets/photo/09.jpg" alt="跟大象抱抱" class="pamelacrop"></a>
+                </div>
+            
+                <!-- 地圖區塊 -->
+                <h3 class="map-title mt-5">我去過的國家 ✈️</h3>
+                <div id="travelMap"></div>
+              </div>
+            </section>
+            
+            <!-- Leaflet CDN -->
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+            
+            <script>
+              const map = L.map('travelMap').setView([10, 120], 4);
+            
+              L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+              }).addTo(map);
+            
+              const countries = [
+                {
+                  name: '泰國 Thailand 🇹🇭',
+                  coords: [13.7367, 100.5232],
+                  story: '泰奶喝到吐、夜市超便宜！'
+                },
+                {
+                  name: '菲律賓 Philippines 🇵🇭',
+                  coords: [14.5995, 120.9842],
+                  story: '去長灘島曬到變紅蝦🦐但真的好漂亮！'
+                },
+                {
+                  name: '馬來西亞沙巴 Malaysia 🇲🇾',
+                  coords: [3.1390, 101.6869],
+                  story: '浮潛的天堂，超清澈的海洋，超多海底生物！'
+                },
+                {
+                  name: '日本 Japan 🇯🇵',
+                  coords: [35.6895, 139.6917],
+                  story: '走進去就出不來的迪士尼🧚‍♀️'
+                },
+                {
+                  name: '印尼 Indonesia 🇮🇩',
+                  coords: [-6.2088, 106.8456],
+                  story: '巴里島根本仙境，直接想躺著不回來'
+                },
+                {
+                  name: '台灣 Taiwan 🇹🇼',
+                  coords: [23.6978, 120.9605],
+                  story: '不論環遊世界到哪，都是我最愛的地方'
+                }
+              ];
+            
+              countries.forEach((place) => {
+                L.marker(place.coords)
+                  .addTo(map)
+                  .bindPopup(`<strong>${place.name}</strong><br>${place.story}`);
+              });
+            </script>
+
                 </div>
             </section>
             <hr class="m-0" />
